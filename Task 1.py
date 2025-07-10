@@ -29,7 +29,7 @@ class UserManager:
             role = random.choice(ROLES)  
             last_activity_time = time.time() - random.uniform(0, 120 * 60)
 
-            self.sessions.append([username, role, last_activity_time])
+            self.sessions.append((username, role, last_activity_time))
 
     def getRole(self, username: str) -> None:
         def compareStrings(a: str, b: str) -> int:
