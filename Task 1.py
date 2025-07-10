@@ -31,7 +31,7 @@ class UserManager:
 
             self.sessions.append((username, role, last_activity_time))
 
-    def getRole(self, username: str) -> None:
+    def getRoleByUsername(self, username: str) -> None:
         def compareStrings(a: str, b: str) -> int:
             lenA = len(a)
             lenB = len(b)
@@ -73,7 +73,7 @@ class UserManager:
             print("Активные сессии:")
             for session in self.sessions:
                 username, role, last_activity_time = session
-                print(f"Имя пользователя: {username}, Роль: {role}, Последнее время активности: {last_activity_time}")
+                print(f"Имя пользователя: {username}, Роль: {role}, Время последнего действия (в секундах): {last_activity_time}")
             print()
             return
         
