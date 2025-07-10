@@ -63,7 +63,7 @@ class UserManager:
 
         for session in self.sessions:
             last_activity_time = session[2]
-            if currentTime - last_activity_time <= 60:
+            if currentTime - last_activity_time <= (60 * 60):
                 activeSessions.append(session)
 
         self.sessions = activeSessions
