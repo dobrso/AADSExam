@@ -87,7 +87,7 @@ def main() -> None:
     userManager.printActiveSessions()
 
     randomUser = random.choice(userManager.sessions)[0]
-    userManager.getRole(randomUser)
+    userManager.getRoleByUsername(randomUser)
 
     userManager.removeExpiredSessions()
     userManager.printActiveSessions()
